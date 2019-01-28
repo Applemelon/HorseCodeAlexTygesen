@@ -8,7 +8,7 @@ import {Observable} from 'rxjs/internal/Observable';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Morse App';
+  title = 'Horse App';
   messages: any[];
   messagesPaged: Observable<any[]>;
   latest: any;
@@ -16,6 +16,7 @@ export class AppComponent {
   humanReadableMessage = '';
   time: number;
   constructor(private messageService: MessageService) {
+    document.title = "Horse Messaging Site";
     this.messageService.getMessagesLastByLimit(5).subscribe(messages => {
       this.messages = messages;
       this.latest = messages[0];

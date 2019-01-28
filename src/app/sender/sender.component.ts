@@ -43,6 +43,7 @@ export class SenderComponent implements OnInit {
       }
       this.time = -1;
     }
+    this.humanReadableMessage = this.messageService.convertToText(this.message);
   }
 
   space() {
@@ -56,7 +57,7 @@ export class SenderComponent implements OnInit {
   }
 
   clear() {
-    this.message = '';
-    this.humanReadableMessage = '';
+    this.message = this.message.substring(0, this.message.length - 1);
+    this.humanReadableMessage = this.messageService.convertToText(this.message);
   }
 }

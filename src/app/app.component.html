@@ -3,9 +3,12 @@
 <div *ngIf="messages">
   <div style="text-align:center">
     <h1>
+      <img src="https://i.imgur.com/TWyGUgI.png" height="50" width="50">
       Welcome to {{ title }}!
+      <img src="https://i.imgur.com/TWyGUgI.png" height="50" width="50" style="transform: scaleX(-1)">
     </h1>
   </div>
+
   <div class="row" style="border: solid black 2px">
     <div class="column">
       <app-message></app-message>
@@ -32,7 +35,7 @@
   <hr>
   <hr>
   <hr>
-
+    <ul><h3 style="color: darkblue">Instructions:</h3></ul>
     <h4 style="color: darkblue"> click "morse" button in less then a 120 ms for . and longer for - </h4>
     <h4 style="color: darkblue"> click "next" to go to next letter</h4>
     <h4 style="color: darkblue"> click "space" to go to next word</h4>
