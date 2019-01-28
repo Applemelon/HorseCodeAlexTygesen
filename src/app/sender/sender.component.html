@@ -1,0 +1,13 @@
+<button class="button1" (mousedown)="morse(true);"
+        (mouseup)="morse(false);" ><h2>Morse</h2></button>
+<button class="button2" (click)="next();"><h2>Next</h2></button>
+<button class="button2" (click)="space();"><h2>Space</h2></button>
+<button class="button2" (click)="clear();"><h2>Clear</h2></button>
+<button [disabled]="!message" class="button3" (click)="send()"><h2>Send</h2></button>
+
+<div *ngIf="message">
+  <h1>{{message}}</h1>  <h2 style="color: darkblue">{{convertMessage(humanReadableMessage)}}</h2>
+</div>
+<div *ngIf="!message">
+  <h4 style="color: darkred">No message yet!</h4>
+</div>

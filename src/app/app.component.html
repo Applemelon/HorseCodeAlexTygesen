@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div *ngIf="!messages">Loading...</div>
+<div *ngIf="messages">
+  <div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <div class="row" style="border: solid black 2px">
+    <div class="column">
+      <app-message></app-message>
+    </div>
+    <div class="column">
+      <img alt="Angular Logo" src="http://www.codebug.org.uk/assets/steps/540/image_1.png">
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+    <ul>
+      <div *ngIf="latest">
+        <h3>Latest Message Information:</h3>
+        <h3>Morse: {{latest.message.toString()}}</h3>
+        <h3 style="color: darkblue">Message: {{convertMessage(latest.message)}} </h3>
+      </div>
+    </ul>
+  </div>
+    <div class="column">
+      <app-sender></app-sender>
+    </div>
+  </div>
+  <hr>
+  <hr>
+  <hr>
+
+    <h4 style="color: darkblue"> click "morse" button in less then a 120 ms for . and longer for - </h4>
+    <h4 style="color: darkblue"> click "next" to go to next letter</h4>
+    <h4 style="color: darkblue"> click "space" to go to next word</h4>
+    <h4 style="color: darkblue"> click "clear" to remove all</h4>
+    <h4 style="color: darkblue"> click "send" to broadcast message</h4>
+
+</div>
+
